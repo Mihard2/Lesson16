@@ -1,0 +1,97 @@
+html {
+  font-size: 10px;
+}
+.menu-link {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 3rem;
+  position: fixed;
+  background-color: #fff;
+  z-index: 9;
+}
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+  display: block;
+  height: 2px;
+  width: 2rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -1rem;
+  top: 50%;
+  margin-top: -1px;
+  background-color: #333;
+}
+.menu-link span:before {
+  transition: all .4s;
+  content: '';
+  margin-top: -6px;
+}
+.menu-link span:after {
+  transition: all .4s;
+  content: '';
+  margin-top: 4px;
+}
+.menu-link_active span {
+  background-color: transparent;
+}
+.menu-link_active span:after {
+  transform: rotate(135deg);
+  margin-top: 0;
+}
+.menu-link_active span:before {
+  transform: rotate(-135deg);
+  margin-top: 0;
+}
+.head {
+  text-align: center;
+}
+.head h2 {
+  font-size: 5rem;
+  margin-bottom: 20rem;
+}
+.main {
+  text-align: center;
+  height: 100vh;
+}
+.main h3 {
+  text-align: center;
+  margin: 3rem auto;
+  font-size: 3rem;
+}
+.menu {
+  background-color: grey;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  left: -100vw;
+  transition: all .5s;
+}
+.menu_active {
+  left: 0;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+.menu ul a {
+  color: #fff;
+  display: block;
+  width: 100vw;
+  line-height: 4;
+  font-weight: 100;
+  letter-spacing: 4px;
+  transition: all 1s;
+}
+.menu ul a:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
